@@ -1,0 +1,43 @@
+.fade-animation {
+  opacity: 50%;
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-animation:hover {
+  opacity: 100%;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  animation: spin 1.5s linear infinite;
+  inset: 0;
+  margin: auto;
+  background:
+    linear-gradient(black, black) padding-box,
+    linear-gradient(to right, rgba(69, 104, 220, 1), rgba(176, 106, 179, 1))
+      border-box;
+  border-radius: 50em;
+  border: 5px solid transparent;
+}
+
+@keyframes animatedBackground {
+  0% {
+    width: 0px;
+    height: 120%;
+  }
+  100% {
+    width: 180px;
+    height: 120%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

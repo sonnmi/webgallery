@@ -1,0 +1,72 @@
+body {
+  background: #000;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left;
+  margin: auto;
+  height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-content {
+  margin: auto;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.textarea {
+  resize: none;
+}
+
+.header-btn {
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.footer {
+  height: 2%;
+  text-align: center;
+}
+
+.credits {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(73, 73, 73);
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.blur {
+  opacity: 30%;
+}
+
+.blur-dark {
+  opacity: 16%;
+}
+
+.error {
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  color: rgb(202, 27, 27);
+}
+
+.error::before {
+  content: "Error: ";
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 95%;
+  }
+}

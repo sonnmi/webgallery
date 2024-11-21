@@ -1,0 +1,221 @@
+.header-container {
+  width: 80%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position:
+    120%,
+    122%,
+    0 130%;
+  background-size: 100% 10px;
+  font-size: 32px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(69, 104, 220, 0.8),
+    rgba(176, 106, 179, 0.8)
+  );
+  color: inherit;
+  text-decoration: none;
+  animation: animatedBackground 5s linear infinite alternate;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.login {
+  width: 72px;
+  height: 45px;
+  margin-right: 18px;
+  background-image: linear-gradient(
+    to right,
+    rgba(69, 104, 220, 0.8),
+    rgba(176, 106, 179, 0.8)
+  );
+  font-size: 14px;
+  font-weight: 600;
+  border: solid 1px white;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  color: white;
+  background-position: center;
+  cursor: pointer;
+}
+
+.browse-btn {
+  width: 72px;
+  height: 45px;
+  margin-right: 18px;
+  background-image: linear-gradient(
+    to right,
+    rgba(216, 191, 216, 0.77),
+    rgba(255, 192, 203, 0.77)
+  );
+  font-size: 14px;
+  font-weight: 600;
+  border: solid 1px white;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  color: white;
+  background-position: center;
+  cursor: pointer;
+}
+
+.browse-container {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(15, 14, 14, 0.9);
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 1000;
+  animation: moveOver 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.browse-gallery {
+  height: 90%;
+}
+
+.browse-container .text {
+  color: rgb(103, 103, 103);
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+}
+
+.browse-close-btn {
+  position: relative;
+  right: 140px;
+  width: 45px;
+  height: 45px;
+  margin-right: 18px;
+  background-image: linear-gradient(
+    to right,
+    rgba(98, 86, 98, 0.77),
+    rgba(45, 39, 40, 0.77)
+  );
+  font-size: 24px;
+  z-index: 1000;
+  margin-top: 25px;
+  font-weight: 600;
+  border: solid 1px white;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 45px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  color: white;
+  background-position: center;
+  cursor: pointer;
+}
+
+.gallery-item {
+  list-style: none;
+  margin: 36px;
+  font-size: 16px;
+  color: rgb(189, 189, 189);
+  cursor: pointer;
+  padding: 16px 28px;
+}
+
+.gallery-item:hover {
+  color: white;
+  background-color: rgba(28, 27, 28, 0.77);
+  border-radius: 18px;
+  padding: 16px 28px;
+}
+
+.control-image-btns {
+  display: flex;
+}
+
+.delete-image-btn {
+  background-image: url(../media/delete-icon.png);
+  width: 48px;
+  height: 48px;
+  margin-right: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.add-image-btn {
+  background-image: url(../media/add-icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .control-image-btns {
+    display: block;
+    position: fixed;
+    right: 0px;
+    bottom: 10px;
+  }
+
+  .delete-image-btn {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+
+  .add-image-btn {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+
+  .browse-btn {
+    margin-bottom: 22px;
+  }
+
+  .add-image-form {
+    position: fixed;
+    bottom: 100px;
+    width: 500px;
+    z-index: 100;
+  }
+
+  .add-image-form > * {
+    background-color: black;
+    z-index: 1000;
+  }
+
+  .gallery-owner {
+    display: none;
+  }
+}

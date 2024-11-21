@@ -1,0 +1,229 @@
+.image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.gallery-container {
+  height: 88%;
+}
+
+.gallery-container .gallery-owner {
+  font-size: 20px;
+  text-align: center;
+  background: -webkit-linear-gradient(rgb(235, 186, 235), rgb(84, 93, 120));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 14px;
+  margin-bottom: -10px;
+}
+
+.image-content-container {
+  width: 80%;
+  height: 90%;
+  z-index: 15;
+  border: 3px;
+  border-style: solid;
+  border-color: rgb(20, 20, 20);
+}
+
+.image-display-container {
+  background-color: rgb(0, 0, 0);
+  border-right: solid 1px rgb(23, 23, 23);
+}
+
+.no-image {
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-image .no-image-info {
+  font-size: 24px;
+}
+
+.image-display-container .image {
+  height: 88%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  min-height: 350px;
+  background-size: cover !important;
+  overflow: hidden;
+}
+
+.image .image-picture {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.form-element::file-selector-button {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(141, 141, 141, 0.4);
+  margin: 1px;
+  border-radius: 10px;
+}
+
+.form-element::file-selector-button:hover {
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(52, 52, 52, 0.4);
+  transition: 0.5;
+}
+
+.form-element.image-file {
+  color: rgba(141, 141, 141, 0.4);
+}
+
+.extension-warning {
+  color: rgba(255, 57, 57, 0.7) !important;
+}
+
+.image-display-container .image-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-height: 20px;
+  background-color: rgb(0, 0, 0);
+  height: 12%;
+  width: 100%;
+}
+
+.image-info-container .image-info {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  padding-left: 1rem;
+  font-size: 12px;
+  line-height: 24px;
+  position: relative;
+}
+
+.image-info-title {
+  font-size: 24px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 90%;
+  text-overflow: ellipsis;
+}
+
+.image-info-author {
+  color: rgb(149, 149, 149);
+  overflow: hidden;
+  position: absolute;
+  width: 90%;
+  transform: translateY(100%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.slide-container {
+  position: absolute;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 112px;
+  height: 36px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(215, 215, 215);
+  font-size: 16px;
+  z-index: 100;
+}
+
+.slide-left-btn {
+  background-image: url(../media/left-button.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.slide-container .slide-left-btn {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.slide-right-btn {
+  background-image: url(../media/right-button.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.slide-container .slide-right-btn {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+.add-image-container {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-right: 18px;
+}
+
+.add-image-form {
+  margin-top: 1rem;
+  background-color: #0c0c0c25;
+  border: 2px solid #49494925;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+  right: 10%;
+  width: 200px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  z-index: 100;
+  user-select: none;
+}
+
+.add-image-form > * {
+  background-color: transparent;
+  margin: 2%;
+  border: none;
+  color: white;
+  font-family: "Karla", Arial, Helvetica, sans-serif;
+}
+
+.add-image-form .add-image {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    padding-top: 38px;
+  }
+
+  .image-content-container {
+    display: block;
+    border: none;
+  }
+
+  .image-display-container {
+    height: 500px;
+    display: block;
+    border: none;
+  }
+
+  .image-display-container .image-info-container {
+    height: 100px;
+  }
+}

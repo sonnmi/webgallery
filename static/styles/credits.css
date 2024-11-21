@@ -1,0 +1,12 @@
+.credits-container {
+  margin-left: 10%;
+  padding-top: 2%;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .credits-container {
+    padding-top: 38px;
+    margin-left: 0px;
+  }
+}

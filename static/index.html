@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WebGallery</title>
+    <link href="styles/cols.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/credits.css" rel="stylesheet" type="text/css" />
+    <link href="styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="styles/image.css" rel="stylesheet" type="text/css" />
+    <link href="styles/comments.css" rel="stylesheet" type="text/css" />
+    <link href="styles/animation.css" rel="stylesheet" type="text/css" />
+    <link href="styles/login.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <p class="error hidden"></p>
+    <div class="main-content">
+      <div class="browse-container hidden">
+        <div class="browse-close-btn">X</div>
+        <div class="text">Explore Galleries</div>
+        <div class="browse-gallery"></div>
+        <div class="slide-container">
+          <div class="slide-left-btn blur"></div>
+          <div class="slide-pages">
+            <span class="slide-current"></span> /
+            <span class="slide-total"></span>
+          </div>
+          <div class="slide-right-btn"></div>
+        </div>
+      </div>
+      <header class="header-container row">
+        <div class="logo">WebGallery</div>
+        <div class="control-image-btns hidden load">
+          <div class="delete-image-btn hidden"></div>
+          <div class="add-image-container">
+            <div class="add-image-btn hidden"></div>
+            <form
+              id="add-image-form"
+              class="add-image-form hidden"
+              enctype="multipart/form-data"
+            >
+              <textarea
+                rows="3"
+                id="image-title"
+                class="form-element textarea"
+                placeholder="Enter the title of the image."
+                name="title"
+                required
+              ></textarea>
+              <input
+                type="file"
+                id="image-picture"
+                name="picture"
+                class="form-element image-file"
+                required
+              />
+              <input type="submit" class="add-image" value="Add an image" />
+            </form>
+          </div>
+          <div class="browse-btn">Browse</div>
+          <div class="login"></div>
+        </div>
+      </header>
+      <div class="gallery-container hidden load">
+        <div class="gallery-owner">Gallery</div>
+        <div class="image-container hidden load">
+          <div class="no-image hidden">
+            <p class="no-image-warning">No Gallery</p>
+            <p class="no-image-info">
+              Browse other galleries or build your own gallery!
+            </p>
+          </div>
+          <div class="image-content-container row hidden">
+            <div class="image-display-container col-6 col-sm-12">
+              <div class="image">
+                <img class="image-picture" src="" alt="" />
+                <div class="slide-container">
+                  <div class="slide-left-btn blur"></div>
+                  <div class="slide-pages">
+                    <span class="slide-current"></span> /
+                    <span class="slide-total"></span>
+                  </div>
+                  <div class="slide-right-btn"></div>
+                </div>
+              </div>
+              <div class="image-info-container">
+                <div class="image-info">
+                  <div class="image-info-title"></div>
+                  <div class="image-info-author">
+                    by <span class="author"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comments-display-container col-6 col-sm-12">
+              <div class="no-display-comments">
+                Log in to view and write comments.
+              </div>
+              <div class="comments-container hidden">
+                <div class="comments"></div>
+                <div class="slide-container-wrap hidden">
+                  <div class="slide-container">
+                    <div class="slide-left-btn blur"></div>
+                    <div class="slide-pages">
+                      <span class="slide-current"></span> /
+                      <span class="slide-total"></span>
+                    </div>
+                    <div class="slide-right-btn"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-form row hidden">
+                <div class="comment-form-icon col-1"></div>
+                <div class="comment-form-text col-auto">
+                  <form
+                    class="create-comment-form row"
+                    id="create-comment-form"
+                  >
+                    <div class="comment-textareas col-auto">
+                      <textarea
+                        id="post-content"
+                        class="comment-form-element textarea"
+                        placeholder="Enter your comment"
+                        rows="1"
+                        name="content"
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      class="comment-form-submit col-1 fade-animation"
+                      type="submit"
+                      required
+                    >
+                      Post
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login-container hidden"></div>
+      <div class="credits-container hidden"></div>
+      <footer class="footer hidden load">
+        <div class="credits">Credits</div>
+      </footer>
+    </div>
+    <script src="js/api-service.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/data.js"></script>
+  </body>
+</html>
